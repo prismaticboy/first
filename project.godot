@@ -8,15 +8,45 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "interactable",
+"language": "GDScript",
+"path": "res://objects/interactable.gd"
+}, {
+"base": "interactable",
+"class": "teleporter",
+"language": "GDScript",
+"path": "res://objects/teleporter.gd"
+} ]
+_global_script_class_icons={
+"interactable": "",
+"teleporter": ""
+}
+
 [application]
 
 config/name="fight"
-run/main_scene="res://Main_menu.tscn"
+run/main_scene="res://scene/main_menu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [physics]
 
