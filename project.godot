@@ -27,8 +27,12 @@ _global_script_class_icons={
 [application]
 
 config/name="fight"
-run/main_scene="res://scene/main_menu.tscn"
+run/main_scene="res://test/main_menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://script/global.gd"
 
 [display]
 
@@ -38,6 +42,13 @@ window/stretch/aspect="keep"
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+mp3={
+"loop": false,
+"loop_offset": 0
+}
 
 [input]
 
