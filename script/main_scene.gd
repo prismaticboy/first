@@ -8,7 +8,7 @@ func _ready():
 func _hook_button_sound(node):
 	for child in node.get_children():
 		if child is Button:
-			child.connect("pressed",click_sound,"play")
+			child.connect("mouse_entered",click_sound,"play")
 		else:
 			_hook_button_sound(child)
 
