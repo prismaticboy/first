@@ -1,0 +1,215 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assert/theme/main_menu_button.tres" type="Theme" id=1]
+[ext_resource path="res://script/main_scene.gd" type="Script" id=2]
+[ext_resource path="res://assert/audio/sfx/button05.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assert/audio/video/main_sky.ogv" type="VideoStream" id=4]
+[ext_resource path="res://assert/audio/bgm/tamhe17.mp3" type="AudioStream" id=5]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("start:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("continue:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 300 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("quit:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 400 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("start:mouse_filter")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("continue:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("quit:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "first"
+length = 0.45
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("start:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Vector2( 1100, 200 ), Vector2( 800, 200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("continue:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.05, 0.35 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Vector2( 1100, 300 ), Vector2( 800, 300 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("quit:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.4 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Vector2( 1100, 400 ), Vector2( 800, 400 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("quit:mouse_filter")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("continue:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("start:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="main_scene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="background" type="VideoPlayer" parent="."]
+margin_right = 1040.0
+margin_bottom = 616.0
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="start" type="Button" parent="."]
+margin_left = 1100.0
+margin_top = 200.0
+margin_right = 1250.0
+margin_bottom = 260.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+text = "开始"
+
+[node name="continue" type="Button" parent="."]
+margin_left = 1100.0
+margin_top = 300.0
+margin_right = 1250.0
+margin_bottom = 360.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+text = "继续"
+
+[node name="quit" type="Button" parent="."]
+margin_left = 1100.0
+margin_top = 400.0
+margin_right = 1250.0
+margin_bottom = 460.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+text = "退出"
+
+[node name="main_menu_button" type="AnimationPlayer" parent="."]
+autoplay = "first"
+anims/RESET = SubResource( 1 )
+anims/first = SubResource( 2 )
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "fs"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="finished" from="background" to="." method="_on_background_finished"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

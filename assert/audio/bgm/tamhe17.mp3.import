@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tamhe17.mp3-7584b6513d969bac1c5be39c3f34f77c.mp3str"
+
+[deps]
+
+source_file="res://assert/audio/bgm/tamhe17.mp3"
+dest_files=[ "res://.import/tamhe17.mp3-7584b6513d969bac1c5be39c3f34f77c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

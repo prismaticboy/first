@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/button05.mp3-4edea0371e67e045d7f628979101cfba.mp3str"
+
+[deps]
+
+source_file="res://assert/audio/sfx/button05.mp3"
+dest_files=[ "res://.import/button05.mp3-4edea0371e67e045d7f628979101cfba.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
