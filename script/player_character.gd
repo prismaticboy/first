@@ -13,7 +13,7 @@ var stop = false
 var char_angle = 0
 
 func _ready():
-	choose_player("Actor1",1)
+	choose_player("Actor1",code_num)
 	pass
 	
 func choose_player(type:String,code:int):
@@ -54,7 +54,7 @@ func choose_player(type:String,code:int):
 	
 	
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var mouse_position = get_global_mouse_position()
 	var self_position  = self.position
 	
@@ -66,7 +66,7 @@ func _physics_process(delta):
 	if can_move and !stop:
 		move_and_slide(directer,Vector2.ZERO)
 	
-func _process(delta):
+func _process(_delta):
 	if char_angle >= -45 and char_angle < 45:
 		animated_sprite.play("up")
 		
